@@ -1,0 +1,11 @@
+.nav{
+    padding: 16px 64px;
+}
+.nav-logo{
+    font-size: 32px;
+    letter-spacing: 6px;
+    color: #fff;
+}
+.nav-logo > span{
+    color: #e2a983;
+}
