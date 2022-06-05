@@ -1,0 +1,15 @@
+.radio{
+    padding: 16px 64px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+    cursor: pointer;
+    color: lightgray;
+    transition: 0.3s;
+}
+.radio:hover{
+    color: #fff;
+}
+.radio > h3{
+    margin-left: 10px;
+}

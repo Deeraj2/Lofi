@@ -6,7 +6,7 @@ body{
 .screen{
     position: relative;
     height: 100%;
-    background: url('/src/components/images/BG.jpg') center no-repeat;
+    background: url('/src/components/images/bg.gif') center no-repeat;
     background-size: cover ;
 }
 .screen-gradient {

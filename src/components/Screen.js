@@ -20,7 +20,7 @@ function Screen() {
         </div>
         <motion.div initial="hidden" animate="visible" variants={variants} transition={{ ease: 'easeIn', delay: 0.4 }} className='screen-body'>
             <h1  className='app-name'>Ani<span>Lofi</span></h1>
-            <p>An online music player </p>
+            <p>A lofi music player </p>
             <button onClick={() => navigate('/music')} className='screen-btn'>Start Listening</button>
         </motion.div>
     </div>
