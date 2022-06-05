@@ -1,17 +1,27 @@
+
 .main{
-    height: 100%;
+    
     overflow: hidden;
-    color: lightgray;
-    object-fit: contain;
 }
 .main-video{
-    width: 100%;
-    height: 100%;
+    width: 140%;
+    height: 140%;
     object-fit: cover;
+    position: absolute;
+    top: -25%;
+    left: -20%;
+    background: linear-gradient(rgba(0, 0, 0, 0.9));
 }
 .main-content{
     position: absolute;
     width: 100%;
     height: 100%;
     top: 0;
+}
+.main-footer{
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 10px;
+    text-align: center;
 }
