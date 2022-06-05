@@ -1,6 +1,8 @@
 
 .main{
-    
+    width: 140%;
+    height: 140%;
+    object-fit: contain;
     overflow: hidden;
 }
 .main-video{
@@ -8,9 +10,8 @@
     height: 140%;
     object-fit: cover;
     position: absolute;
-    top: -25%;
+    top: -20%;
     left: -20%;
-    background: linear-gradient(rgba(0, 0, 0, 0.9));
 }
 .main-content{
     position: absolute;
@@ -24,4 +25,56 @@
     right: 0;
     bottom: 10px;
     text-align: center;
+    color: #fff;
 }
+
+.main-footer-audio{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.footer-bar{
+    margin-left: 30px;
+    display: flex;
+}
+.volumeDial{
+    margin-left: 9px;
+    color: #fff;
+    cursor: pointer;
+}
+.main-btn{
+    display: none;
+    border: transparent;
+    background: transparent;
+    color: #fff;
+    
+}
+@media (max-width: 1300px){
+    .main-video {
+            width: 190%;
+            object-fit: cover;
+            position: absolute;
+            top: -20%;
+            left: -20%;
+        }
+}
+@media (max-width: 899px) {
+    .main-video {
+        width: 250%;
+        object-fit: cover;
+        position: absolute;
+        top: -20%;
+        left: -30%;
+    }
+}
+@media (max-width: 630px) {
+    .main-video {
+        width: 320%;
+        object-fit: cover;
+        position: absolute;
+        top: -20%;
+        left: -30%;
+    }
+}
+
+

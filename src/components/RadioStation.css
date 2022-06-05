@@ -12,9 +12,30 @@
 }
 .radio > h3{
     margin-left: 10px;
+    font-weight: bold;
 }
 .radiodata {
     margin-top: 3rem;
-    width: 400px;
+    max-width: 400px;
     border-right: 1px solid #fff;
+}
+@media (max-width: 1300px) {
+    .radio>h3 {
+            margin-left: 10px;
+            font-size: 15px;
+    }
+    .radiodata {
+        margin-top: 3rem;
+        width: 300px;
+        border-right: 1px solid #fff;
+    }
+}
+@media (max-width: 900px) {
+    .radiodata {
+        margin-top: 1rem;
+        border: none;
+    }
+    .radio{
+        margin-bottom: 1px;
+    }
 }

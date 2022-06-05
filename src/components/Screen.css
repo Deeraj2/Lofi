@@ -11,6 +11,7 @@ body{
 }
 .screen-gradient {
     width: 100%;
+    position: absolute;
     z-index: 1;
     height: 100vh;
     background: rgba(0, 0, 0, 0.4);

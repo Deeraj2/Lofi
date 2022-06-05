@@ -2,14 +2,30 @@ import React, { useState } from 'react';
 import './Main.css';
 import Nav from './Nav';
 import ReactPlayer from "react-player";
-import PlayBtn from './PlayBtn';
 import RadioStation from './RadioStation';
+import PlayCircleOutlineIcon from '@mui/icons-material/PlayCircleOutline';
+import PauseCircleOutlineIcon from '@mui/icons-material/PauseCircleOutline';
+import VolumeUpIcon from '@mui/icons-material/VolumeUp';
 
 function Main() { 
-
- 
-  const[yvideo, setyVideo] = useState("//www.youtube.com/embed/WDXPJWIgX-o?autoplay=1&start=1")
   
+  const [sidebar, setSidebBar] = useState(false)
+  const showSidebar = () => setSidebBar(!sidebar);
+
+
+  const[yvideo, setyVideo] = useState("//www.youtube.com/embed/WDXPJWIgX-o?autoplay=1&start=1")
+  const [isplaying, setIsPlaying] = useState(true);
+  const [volume, setVolume] = useState(0.5);
+
+  const play = () => {
+    setIsPlaying(true);
+    setVolume(0.5);
+  }
+  const pause = () => {
+    setIsPlaying(false);
+    setVolume("mute");
+  }
+
   const animeVibe = () => {
     setyVideo("//www.youtube.com/embed/WDXPJWIgX-o?autoplay=1&start=1");
   }
@@ -64,9 +80,9 @@ function Main() {
                 height="100%"
                 position="relative"
                 overflow="hidden"
-                playing={true}
+                playing={isplaying}
                 loop={true}
-                muted
+                volume={volume}
               />
         </div>
         <div className='main-detail'>
@@ -87,10 +103,29 @@ function Main() {
             />
           </div>
           <div className='main-footer'>
-            <PlayBtn />
+            <div className="main-footer-audio">
+              <div className='footer-ply'>
+                {isplaying ? (<PauseCircleOutlineIcon onClick={pause}  sx={{ fontSize: "60px"}} />) : (<PlayCircleOutlineIcon onClick={play} sx={{ fontSize: "60px" }} />)}
+              </div>
+              <div className='footer-bar'>
+                <VolumeUpIcon sx={{ fontSize: "40px"}}/>
+                <input
+                  className="volumeDial"
+                  type="range"
+                  min={0}
+                  max={1}
+                  value={volume}
+                  step={0.01}
+                  onChange={(event) => {
+                    setVolume(event.target.valueAsNumber);
+                  }}
+                />
+              </div>
+            </div>
+                 
           </div>
+
         </div>
-        
     </div>
   )
 }
