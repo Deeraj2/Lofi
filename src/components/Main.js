@@ -8,22 +8,20 @@ import PauseCircleOutlineIcon from '@mui/icons-material/PauseCircleOutline';
 import VolumeUpIcon from '@mui/icons-material/VolumeUp';
 
 function Main() { 
-  
-  const [sidebar, setSidebBar] = useState(false)
-  const showSidebar = () => setSidebBar(!sidebar);
-
-
   const[yvideo, setyVideo] = useState("//www.youtube.com/embed/WDXPJWIgX-o?autoplay=1&start=1")
   const [isplaying, setIsPlaying] = useState(true);
   const [volume, setVolume] = useState(0.5);
+  const [className, setClassName] = useState("main");
 
   const play = () => {
     setIsPlaying(true);
     setVolume(0.5);
+    setClassName("main");
   }
   const pause = () => {
     setIsPlaying(false);
     setVolume("mute");
+    setClassName("mainPause");
   }
 
   const animeVibe = () => {
@@ -71,7 +69,7 @@ function Main() {
   }
 
   return (
-      <div className='main'>
+      <div className={className}>
 
         <div className='main-video'>
           <ReactPlayer
@@ -105,10 +103,10 @@ function Main() {
           <div className='main-footer'>
             <div className="main-footer-audio">
               <div className='footer-ply'>
-                {isplaying ? (<PauseCircleOutlineIcon onClick={pause}  sx={{ fontSize: "60px"}} />) : (<PlayCircleOutlineIcon onClick={play} sx={{ fontSize: "60px" }} />)}
+                {isplaying ? (<PauseCircleOutlineIcon onClick={pause} className="audioicon"  sx={{ fontSize: "60px"}} />) : (<PlayCircleOutlineIcon onClick={play} className="audioicon" sx={{ fontSize: "60px" }} />)}
               </div>
               <div className='footer-bar'>
-                <VolumeUpIcon sx={{ fontSize: "40px"}}/>
+                <VolumeUpIcon sx={{ fontSize: "30px"}}/>
                 <input
                   className="volumeDial"
                   type="range"
@@ -122,7 +120,7 @@ function Main() {
                 />
               </div>
             </div>
-                 
+            
           </div>
 
         </div>
@@ -130,4 +128,4 @@ function Main() {
   )
 }
 
-export default Main
+export default Main;

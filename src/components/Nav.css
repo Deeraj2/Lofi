@@ -1,5 +1,6 @@
 .nav{
     padding: 16px 64px;
+    cursor: pointer;
 }
 .nav-logo{
     font-size: 32px;
