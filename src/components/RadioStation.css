@@ -5,7 +5,7 @@
     margin-bottom: 5px; 
     cursor: pointer;
     color: lightgray;
-    transition: 0.3s;
+    transition: 0.3s  all ease-in-out;
 }
 .radio:hover{
     color: #e2a983;
@@ -32,7 +32,7 @@
 }
 @media (max-width: 900px) {
     .radiodata {
-        margin-top: 1rem;
+        margin-top: 0.5rem;
         border: none;
     }
     .radio{
